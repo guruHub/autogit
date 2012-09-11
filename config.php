@@ -4,9 +4,9 @@
 
 $host_name     = exec("hostname"); 
 $branch        = "master";
-$mail_to       = "gaston@guruhub.com.uy";
-$password      = "mu0N";
-$repo_path     = "/home/gas/repo/1";
+$mail_to       = "mail@gmail.com";
+$password      = "secretPass.1";
+$repo_path     = "/var/www/myrepo";
 
 // STOP EDITING !
 
