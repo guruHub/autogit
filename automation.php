@@ -26,7 +26,7 @@ function send_mail($log_filename, $mail_to){
 
 	$body = file_get_contents($log_filename);
 	$body = "<pre>{$body}</pre>";
-	mail(MAIL_TO, MAIL_SUBJECT, MAIL_PREPEND.$body.MAIL_APPEND, $headers);
+	mail($mail_to, $mail_subject, $mail_prepend.$body.$mail_append, $headers);
 }
 
 
