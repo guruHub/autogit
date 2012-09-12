@@ -1,7 +1,7 @@
 <?php 
 
 // BASIC CONF
-$host_name     = exec("hostname"); 
+$hostname     = exec("hostname"); 
 $branch        = "master";
 $mail_to       = "mail@gmail.com";
 $password      = "secretPass.1";
