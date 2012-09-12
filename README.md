@@ -1,1 +1,2 @@
-AutoGit Standalone
+== AutoGit Standalone ==
+
