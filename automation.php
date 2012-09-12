@@ -11,7 +11,7 @@
 include 'config.php';
 $git_command   = "git reset --hard head && git pull origin {$branch}";
 
-function send_mail($log_filename, $mail_to){
+function send_mail($log_filename, $mail_to, $branch, $hostname){
 	$mail_from     = "support@guruhub.com.uy";
 	$mail_subject  = "[AutoGit] pull on branch {$branch}@{$hostname}"; 
 	$mail_prepend  = "Hi, <br />  this is GuruHub automation script. <br />";
@@ -34,7 +34,8 @@ if ($_POST['payload']){
 	if($_GET['password'] == $password){
 		$log_filename = "/tmp/autogit_".date("dmY_hms").".log";
 		exec("cd {$repo_path} && {$git_command} > {$log_filename} 2>&1");
-		send_mail($log_filename, $mail_to);
+		error_log("cd {$repo_path} && {$git_command} > {$log_filename} 2>&1");
+		send_mail($log_filename, $mail_to, $branch, $hostname);
 	}else{
 		throw new Exception("Payload received, but wrong password");
 	}
