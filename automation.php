@@ -9,7 +9,8 @@
 
 
 include 'config.php';
-$git_command   = "git reset --hard HEAD && git pull origin {$branch}";
+$git_command = ($reset) ? "git reset --hard HEAD &&" : ""; 
+$git_command   .= " git pull origin {$branch}";
 
 function send_mail($log_filename, $mail_to, $branch, $hostname){
 	$mail_from     = "support@guruhub.com.uy";
