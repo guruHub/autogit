@@ -11,7 +11,7 @@
     `$ git submodule init`
     `$ git submodule update`
 
-* Make shure the user who runs the php (www-data in most of cases) can pull from your repo, and you can send mails from your browser
+* Make shure the user who runs the php (www-data in most of cases) can pull from your repo, and you can send mails from your server
 
 * Edit your config file.
     `$ cp config.php.sample config.php`
